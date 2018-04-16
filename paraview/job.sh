@@ -49,13 +49,13 @@ for i in {1..10};do
         fi
 done
 
-echo "*********************************************************************"
+echo "*****************************************************************************"
 echo "  Bienvenido $(whoami)                                                       "
 echo "  DISPLAY asignada: ${DISPLAY_PORT}                                          "
 echo "  puerto para el tunel $LISTEN_PORT                                          "
-echo "  ssh -l cbernal -L 15000:ngrid:$LISTEN_PORT  toctoc.sc3.uis.edu.co  "
-echo "  y ingrese el password generado                             "
-echo "---------------------------------------------------------------------"
+echo "  ssh -l <user> -L 15000:ngrid:$LISTEN_PORT  <URI>                           "
+echo "  y ingrese el password generado                                             "
+echo "-----------------------------------------------------------------------------"
 
 export DISPLAY=:$DISPLAY_NUM && /data/docker/novnc/./run_nvnc.sh $LISTEN_PORT $DISPLAY_PORT && \
 
